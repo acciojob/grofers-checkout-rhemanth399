@@ -7,8 +7,9 @@ const getSum = () => {
 //Add your code here
 let totalPrice=0;
 const table = document.querySelector('table');
-  const newRow = table.insertRow();
-  const newCell = newRow.insertCell();
+  const newRow = document.createElement('tr');
+  table.appendChild(newRow)
+ // const newCell = newRow.insertCell();
   prices.forEach(price=>{
 	  totalPrice+=parseFloat(price.textContent);
       
@@ -17,7 +18,7 @@ const table = document.querySelector('table');
   
 
   })
-  newCell.textContent = `Total Price: $${totalPrice}`;
+  newRow.textContent = `Total Price: $${totalPrice}`;
 };
 
 
