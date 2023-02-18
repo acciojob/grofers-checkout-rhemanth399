@@ -6,16 +6,18 @@ let prices=document.querySelectorAll('.price');
 const getSum = () => {
 //Add your code here
 let totalPrice=0;
-  prices.forEach(price=>{
-	  totalPrice+=parseFloat(price.textContent);
-      const table = document.querySelector('table');
+const table = document.querySelector('table');
   const newRow = table.insertRow();
   const newCell = newRow.insertCell();
+  prices.forEach(price=>{
+	  totalPrice+=parseFloat(price.textContent);
+      
   
   // Set the text content of the total price cell to the calculated total price
-  newCell.textContent = `Total Price: $${totalPrice}`;
+  
 
   })
+  newCell.textContent = `Total Price: $${totalPrice}`;
 };
 
 
